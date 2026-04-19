@@ -1,0 +1,64 @@
+/* 全体の設定 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* 背景は真っ黒 */
+    color: #00ffcc; /* 文字はネオンブルー */
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden; /* 画面からはみ出さないように */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 画面中央の入れ物 */
+.container {
+    text-align: center;
+    z-index: 10;
+}
+
+/* タイトルがチカチカ動く演出 */
+.glitch {
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #ff00ff;
+    animation: flash 0.2s infinite alternate;
+}
+
+@keyframes flash {
+    from { opacity: 1; }
+    to { opacity: 0.8; }
+}
+
+/* メニューボタンのデザイン */
+.menu {
+    margin-top: 30px;
+}
+
+.menu-btn {
+    background: transparent;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s; /* じわっと変わる */
+    font-weight: bold;
+}
+
+/* マウスを乗せた時に光る */
+.menu-btn:hover {
+    background-color: #00ffcc;
+    color: #000;
+    box-shadow: 0 0 20px #00ffcc;
+    transform: scale(1.2); /* 少し大きくなる */
+}
+
+/* 説明文の箱 */
+.info-box {
+    margin-top: 40px;
+    border: 1px solid #333;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
